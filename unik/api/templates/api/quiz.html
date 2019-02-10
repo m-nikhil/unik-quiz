@@ -1,0 +1,16 @@
+{% load rest_framework %}
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+    {% for quiz in quizz %}
+        <small class="text-muted">{{ quiz.date | date:"d/F/Y" }}</small>
+        <h2><a class="article-title" href="#">{{ quiz.title }}</a></h2>
+    {% endfor %}
+</body>
